@@ -1,0 +1,17 @@
+看web.xml文件可以得到以下结论：
+1、由以下配置可以分析出：
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<!-- 如果没有指定 contextConfigLocation 的context参数， ContextLoaderListener 将会查找一个名为 /WEB-INF/applicationContext.xml 的文件加载 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	
+	当服务器启动的时候，spring容器就启动了，就意味着spring容器中的所有的bean的配置的实例全部就加载完毕了。struts2也启动了。
+	
+2、在struts.xml中
+	<constant name="struts.objectFactory" value="spring" />的配置，告诉struts2在spring容器中根据<action name="personAction" class="personAction">的class属性的值，来找spring容器中相应的id值

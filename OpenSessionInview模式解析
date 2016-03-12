@@ -1,0 +1,11 @@
+错误：
+could not initialize proxy - no Session 
+org.hibernate.LazyInitializationException: could not initialize proxy - no Session 
+
+利用spring声明式事务处理的时候，如果采取懒加载的模式，当页面上要输出相应的属性的时候，这个时候session早已经关闭掉了
+
+解决方案：
+	让session延迟关闭   OpenSessionInview模式   当要显示的数据在页面上显示出来以后（加载完毕以后，才要关闭session）
+	
+在web.xml中，加入：
+	

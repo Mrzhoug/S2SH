@@ -1,0 +1,22 @@
+#
+#Sun Jun 26 16:38:17 CST 2011
+genBasicCompId=false
+sessionFactoryName=
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=increment
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=
+configFile=/itcast420s2sh/config/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true
